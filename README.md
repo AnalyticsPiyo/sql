@@ -1,5 +1,5 @@
 # sql sequence
-最も古い顧客IDを取得したい時に使用
+最も古い日付(date)の顧客ID(useid)を取得したい時に使用
 
 ```ROW_NUMBER() OVER(PARTITION BY userid ORDER BY userid, date ASC) seq```
 
