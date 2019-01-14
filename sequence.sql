@@ -13,12 +13,9 @@ WITH tmp0 AS (
 ), tmp1 AS (
   SELECT
     *
-    , row_number() over (partition by "userid") as seq -- ※ここが重要※
+    , ROW_NYMBER() OVER (PARTITION BY "userid" ORDER BY "userid", "date") AS seq -- ※ここが重要※
   FROM
     "tmp0"
-  ORDER BY
-    "userid" ASC
-    , "date" ASC
 )
 SELECT
   *
