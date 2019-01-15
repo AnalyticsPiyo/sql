@@ -12,4 +12,4 @@
 ## others.sql
 sql Tips
 ### 特定文字カウント
-'''(CHAR_LENGTH("カラム名") - CHAR_LENGTH(REPLACE("カラム名","カウント文字列", ""))) / CHAR_LENGTH("カウント文字列")```
+```(CHAR_LENGTH("カラム名") - CHAR_LENGTH(REPLACE("カラム名",'カウント文字列', ''))) / CHAR_LENGTH('カウント文字列') AS "cnt"```
